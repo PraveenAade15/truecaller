@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="com.truecaller.ui.view.MainActivity"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Load Button -->
+        <Button
+            android:id="@+id/btnLoad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Load Website &amp; Analyze"
+            android:textAllCaps="false"
+            android:backgroundTint="#6200EE"
+            android:textColor="@android:color/white"
+            android:elevation="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 15th Character -->
+        <TextView
+            android:id="@+id/tv15thChar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="15th Char:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/btnLoad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Every 15th Character -->
+        <TextView
+            android:id="@+id/tvEvery15th"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Every 15th Char:"
+            android:textSize="15sp"
+
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv15thChar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#CCCCCC"
+            app:layout_constraintTop_toBottomOf="@id/tvEvery15th"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Word Count ScrollView -->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvWordCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Word Count:"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@android:color/black"
+                android:paddingBottom="100dp" />
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

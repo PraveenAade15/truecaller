@@ -1,6 +1,6 @@
 # Truecaller Android Technical Assignment
 
-## 👨‍💻 Candidate: [Your Name Here]
+## 👨‍💻 PRAVEEN AADE 
 
 ---
 
